@@ -98,7 +98,7 @@ const handleSubmit = async () => {
   width: min(420px, 100%);
   padding: 3rem 2.75rem;
   border-radius: 24px;
-  background: rgba(15, 23, 42, 0.65);
+  background: #3a96a8;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 60px rgba(15, 23, 42, 0.6);
   color: #e2e8f0;
@@ -111,7 +111,7 @@ header {
 }
 
 .eyebrow {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #38bdf8;

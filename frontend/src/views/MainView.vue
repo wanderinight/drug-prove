@@ -85,8 +85,6 @@ const handleLogout = () => {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 2rem;
-  gap: 1.25rem;
   overflow-y: auto; /* 右侧内容区域内部滚动 */
 }
 
@@ -94,16 +92,13 @@ const handleLogout = () => {
   position: sticky;
   top: 0;
   z-index: 10;
-  /* 去掉卡片外框和阴影，只保留内部内容 */
-  border-radius: 0;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0 0 0.75rem;
-  margin-bottom: 0.75rem;
+  background: #7db8c4;
+  padding: 1rem 0.75rem;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  border-radius: 0;
 }
 
 .info-row {
@@ -139,10 +134,11 @@ const handleLogout = () => {
 
 .page-body {
   flex: 1;
-  border-radius: 18px;
-  background: #ffffff;
-  padding: 1.5rem 1.75rem;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+  /* 去掉大卡片的样式，让内容直接显示 */
+  padding: 1.5rem 2rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 </style>
 

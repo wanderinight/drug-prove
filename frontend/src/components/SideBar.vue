@@ -98,7 +98,7 @@ ul {
 }
 
 .active {
-  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  background: #7db8c4;
   color: var(--sidebar-text);
 }
 </style>

@@ -767,7 +767,7 @@ onMounted(() => {
 .data-table {
   width: 100%;
   border-collapse: collapse;
-  color: #cbd5f5;
+  color: #000000;
 }
 
 .data-table thead {
@@ -779,14 +779,15 @@ onMounted(() => {
   text-align: left;
   font-weight: 600;
   font-size: 0.9rem;
-  color: #94a3b8;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  color: #000000;
+  border-bottom: 2px solid rgba(148, 163, 184, 0.5);
 }
 
 .data-table td {
   padding: 0.75rem;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
   font-size: 0.9rem;
+  color: #000000;
 }
 
 .data-table tbody tr:hover {
@@ -932,7 +933,7 @@ onMounted(() => {
 
 .role-list-container {
   flex: 0 0 300px;
-  background: rgba(2, 6, 23, 0.5);
+  background: #ffffff;
   border-radius: 12px;
   padding: 1rem;
   border: 1px solid rgba(148, 163, 184, 0.2);
@@ -940,7 +941,7 @@ onMounted(() => {
 
 .role-list-container h4 {
   margin: 0 0 1rem;
-  color: #cbd5f5;
+  color: #000000;
   font-size: 1rem;
 }
 
@@ -957,6 +958,7 @@ onMounted(() => {
   cursor: pointer;
   transition: all 0.2s;
   border: 1px solid transparent;
+  color: #000000;
 }
 
 .role-item:hover {
@@ -971,7 +973,7 @@ onMounted(() => {
 
 .role-name {
   display: block;
-  color: #cbd5f5;
+  color: #000000;
   font-weight: 500;
   margin-bottom: 0.25rem;
 }
@@ -990,7 +992,7 @@ onMounted(() => {
 
 .permission-list-container {
   flex: 1;
-  background: rgba(2, 6, 23, 0.5);
+  background: #ffffff;
   border-radius: 12px;
   padding: 1.5rem;
   border: 1px solid rgba(148, 163, 184, 0.2);
@@ -1005,7 +1007,7 @@ onMounted(() => {
 
 .permission-header h4 {
   margin: 0;
-  color: #cbd5f5;
+  color: #000000;
 }
 
 .no-role-selected {

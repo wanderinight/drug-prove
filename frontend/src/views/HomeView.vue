@@ -343,7 +343,7 @@ th {
 }
 
 .stat-card {
-  background: rgba(30, 64, 175, 0.2);
+  background: rgba(243, 244, 246, 0.8);
   border-radius: 12px;
   padding: 1.2rem;
   border: 1px solid rgba(59, 130, 246, 0.3);
@@ -352,14 +352,14 @@ th {
 
 .stat-label {
   font-size: 0.85rem;
-  color: #9ca3af;
+  color: #3a96a8;
   margin-bottom: 0.5rem;
 }
 
 .stat-value {
   font-size: 2rem;
   font-weight: 600;
-  color: #60a5fa;
+  color: #7db8c4;
 }
 
 .stat-value.alert-value {
@@ -401,7 +401,7 @@ th {
 
 .summary-label {
   font-size: 0.9rem;
-  color: #9ca3af;
+  color: #3a96a8;
   margin-bottom: 0.5rem;
 }
 

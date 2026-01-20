@@ -333,11 +333,11 @@ onMounted(() => {
 }
 
 .refresh-btn {
-  background: rgba(59, 130, 246, 0.1);
-  border: 1px solid rgba(59, 130, 246, 0.6);
-  border-radius: 6px;
-  padding: 0.35rem 0.75rem;
-  color: #bfdbfe;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  background: transparent;
+  color: #cbd5f5;
   cursor: pointer;
 }
 
@@ -348,13 +348,13 @@ onMounted(() => {
 }
 
 .device-card {
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  background: #ffffff;
+  background: rgba(243, 244, 246, 0.8);
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.9rem;
 }
 
 .device-header {
@@ -370,8 +370,8 @@ onMounted(() => {
 
 .device-header .code {
   margin: 0;
-  font-size: 0.8rem;
-  color: #94a3b8;
+  font-size: 0.85rem;
+  color: #3a96a8;
 }
 
 .status {
@@ -397,7 +397,7 @@ onMounted(() => {
 
 .device-body {
   font-size: 0.85rem;
-  color: #cbd5f5;
+  color: #7db8c4;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
@@ -411,19 +411,19 @@ onMounted(() => {
 }
 
 .alert-panel {
-  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
   padding-top: 0.8rem;
 }
 
 .panel-title {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: #3a96a8;
   margin-bottom: 0.4rem;
 }
 
 .panel-content {
   font-size: 0.85rem;
-  color: #e2e8f0;
+  color: #7db8c4;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;

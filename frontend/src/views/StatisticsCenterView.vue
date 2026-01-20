@@ -69,9 +69,6 @@
             </div>
           </div>
 
-          <div class="actions">
-            <button class="ghost-btn" @click="goReport(device)">获取报告</button>
-          </div>
         </article>
         <div v-if="!devices.length" class="empty-card">暂无设备数据</div>
       </div>
@@ -81,13 +78,11 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import { useRouter } from 'vue-router';
 import axios from 'axios';
 
 const apiBase = import.meta.env.VITE_API_BASE_URL || '';
 const devices = ref([]);
 const loading = ref(false);
-const router = useRouter();
 
 const formatDateTime = (value) => {
   if (!value) return '-';
@@ -129,10 +124,6 @@ const refreshAll = async () => {
   } finally {
     loading.value = false;
   }
-};
-
-const goReport = (device) => {
-  router.push({ name: 'report-center', query: { device: device.deviceCode } });
 };
 
 onMounted(() => {
@@ -201,7 +192,7 @@ onMounted(() => {
 .device-card {
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  background: #ffffff;
+  background: rgba(243, 244, 246, 0.8);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -221,7 +212,7 @@ onMounted(() => {
 .device-header .code,
 .device-header .location {
   margin: 0;
-  color: #94a3b8;
+  color: #3a96a8;
   font-size: 0.85rem;
 }
 
@@ -257,12 +248,12 @@ onMounted(() => {
 
 .stats-row .label {
   display: block;
-  color: #94a3b8;
+  color: #3a96a8;
   font-size: 0.78rem;
 }
 
 .stats-row .value {
-  color: #f8fafc;
+  color: #7db8c4;
   font-weight: 600;
 }
 
@@ -279,7 +270,7 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  color: #94a3b8;
+  color: #3a96a8;
   font-size: 0.85rem;
   margin-bottom: 0.6rem;
 }
@@ -287,7 +278,7 @@ onMounted(() => {
 .calibration-block h5 {
   margin: 0;
   font-size: 0.95rem;
-  color: #e2e8f0;
+  color: #3a96a8;
 }
 
 .calibration-grid {
@@ -299,12 +290,12 @@ onMounted(() => {
 
 .calibration-grid .label {
   display: block;
-  color: #94a3b8;
+  color: #3a96a8;
   font-size: 0.78rem;
 }
 
 .calibration-grid .value {
-  color: #f8fafc;
+  color: #7db8c4;
   font-weight: 500;
 }
 

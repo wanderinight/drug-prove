@@ -2,7 +2,7 @@
   font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
   --primary-color: #3A96A8;
   --accent-color: #7DB8C4;
-  --app-background-color: #ffffff;
+  --app-background-color: #f3f4f6;
   /* 中性色（灰） */
   --text-gray: #666666;
   /* 侧边栏专用背景 */
@@ -33,7 +33,7 @@ body,
   align-items: center;
   justify-content: center;
   /* 使用主题色的渐变背景，仅保留 #3A96A8 和 #7DB8C4 */
-  background: radial-gradient(circle at top, #7DB8C4, #3A96A8);
+  background: radial-gradient(circle at top,#3A96A8, #7DB8C4);
   padding: 2rem;
 }
 

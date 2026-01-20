@@ -603,7 +603,7 @@ button:disabled {
 
 .preview-body {
   flex: 1;
-  background: rgba(2, 6, 23, 0.7);
+  background: #ffffff;
   border-radius: 12px;
   border: 1px dashed rgba(94, 234, 212, 0.3);
   overflow: hidden;
@@ -695,7 +695,7 @@ button:disabled {
   font-size: 0.9rem;
   text-align: center;
   padding: 2rem;
-  background: rgba(2, 6, 23, 0.7);
+  background: #ffffff;
   border-radius: 12px;
   border: 1px dashed rgba(94, 234, 212, 0.3);
 }

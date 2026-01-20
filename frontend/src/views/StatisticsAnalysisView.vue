@@ -558,8 +558,15 @@ onMounted(() => {
 }
 
 .primary-btn {
+  background: #ffffff;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.primary-btn:disabled {
   background: rgba(59, 130, 246, 0.2);
   border-color: rgba(59, 130, 246, 0.6);
+  opacity: 0.8;
 }
 
 .secondary-btn {

@@ -214,13 +214,21 @@ onMounted(() => {
   font-size: 0.85rem;
 }
 
-.refresh-btn,
-.ghost-btn {
+.refresh-btn {
   border: 1px solid rgba(148, 163, 184, 0.5);
   border-radius: 999px;
   padding: 0.35rem 0.9rem;
   background: transparent;
   color: #cbd5f5;
+  cursor: pointer;
+}
+
+.ghost-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  background: #3a96a8;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -238,7 +246,7 @@ onMounted(() => {
 .device-card {
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  background: #ffffff;
+  background: rgba(243, 244, 246, 0.8);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -258,7 +266,7 @@ onMounted(() => {
 .device-header .code,
 .device-header .location {
   margin: 0;
-  color: #94a3b8;
+  color: #3a96a8;
   font-size: 0.85rem;
 }
 
@@ -289,7 +297,7 @@ onMounted(() => {
 
 .status-text {
   font-size: 0.8rem;
-  color: #cbd5f5;
+  color: #3a96a8;
 }
 
 .stats-row {
@@ -301,12 +309,12 @@ onMounted(() => {
 
 .stats-row .label {
   display: block;
-  color: #94a3b8;
+  color: #3a96a8;
   font-size: 0.78rem;
 }
 
 .stats-row .value {
-  color: #f8fafc;
+  color: #7db8c4;
   font-weight: 600;
 }
 
@@ -323,14 +331,14 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  color: #94a3b8;
+  color: #3a96a8;
   font-size: 0.85rem;
 }
 
 .inspection-block h5 {
   margin: 0;
   font-size: 0.95rem;
-  color: #e2e8f0;
+  color: #3a96a8;
 }
 
 .inspection-grid {
@@ -343,12 +351,12 @@ onMounted(() => {
 
 .inspection-grid .label {
   display: block;
-  color: #94a3b8;
+  color: #3a96a8;
   font-size: 0.78rem;
 }
 
 .inspection-grid .value {
-  color: #f8fafc;
+  color: #7db8c4;
   font-weight: 500;
 }
 
