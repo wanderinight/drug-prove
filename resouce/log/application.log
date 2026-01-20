@@ -46741,3 +46741,2654 @@ Caused by: java.net.SocketTimeoutException: Connect timed out
     limit
         ?
 2026-01-20 22:59:40 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getDeviceAlertOverview，结果：[{deviceType=D4, operationalStatus=RUNNING, alertStatus=ON, latestAlertLevel=YELLOW, latestAlertTime=2025-07-13T10:05:04, location=loc1, deviceCode=001, deviceId=1, deviceName=Inoue Rin, monitorStatus=MONITORON, latestAlertContext=002}, {deviceType=DB, operationalStatus=RUNNING, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc2, deviceCode=002, deviceId=2, deviceName=Kong Lan, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc3, deviceCode=003, deviceId=3, deviceName=Chic Kwok Yin, monitorStatus=MONITORINTERRUPT, latestAlertContext=null}, {deviceType=D4, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc4, deviceCode=004, deviceId=4, deviceName=Lo Wai Lam, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc5, deviceCode=005, deviceId=5, deviceName=Saito Ayano, monitorStatus=MONITOROFF, latestAlertContext=null}]
+2026-01-20 23:00:21 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorOnCountNow，参数：[]
+2026-01-20 23:00:21 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】UserService.getStaffByStaffcode，参数：[admin]
+2026-01-20 23:00:21 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getCountAll，参数：[]
+2026-01-20 23:00:21 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorOffCountNow，参数：[]
+2026-01-20 23:00:21 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorInterruptCountNow，参数：[]
+2026-01-20 23:00:21 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITOROFF'
+2026-01-20 23:00:21 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getDeviceAlertOverview，参数：[]
+2026-01-20 23:00:21 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITORON'
+2026-01-20 23:00:21 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffinfo s1_0 
+    where
+        s1_0.staffcode=?
+2026-01-20 23:00:21 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0
+2026-01-20 23:00:21 [http-nio-9091-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITORINTERRUPT'
+2026-01-20 23:00:21 [http-nio-9091-exec-10] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:21 [http-nio-9091-exec-6] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:21 [http-nio-9091-exec-5] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:21 [http-nio-9091-exec-1] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:21 [http-nio-9091-exec-3] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:21 [http-nio-9091-exec-2] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:21 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorOffCountNow，结果：1
+2026-01-20 23:00:21 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorOnCountNow，结果：3
+2026-01-20 23:00:21 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:00:21 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getCountAll，结果：5
+2026-01-20 23:00:21 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        sr1_0.id,
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename,
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffrole sr1_0 
+    left join
+        roleinfo r1_0 
+            on r1_0.roleid=sr1_0.roleid 
+    left join
+        staffinfo s1_0 
+            on s1_0.staffid=sr1_0.staffid 
+    where
+        sr1_0.staffid=?
+2026-01-20 23:00:21 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorInterruptCountNow，结果：1
+2026-01-20 23:00:21 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】UserService.getStaffByStaffcode，结果：com.example.demo.entity.Staff@2fff06d0
+2026-01-20 23:00:21 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:21 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】RoleService.getRoleById，参数：[1]
+2026-01-20 23:00:21 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename 
+    from
+        roleinfo r1_0 
+    where
+        r1_0.roleid=?
+2026-01-20 23:00:21 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:21 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】RoleService.getRoleById，结果：com.example.demo.entity.Role@7779c55e
+2026-01-20 23:00:21 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:21 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getAlertDetailsByTimeRange，参数：[2026-01-13T07:00, 2026-01-20T07:00, null, 0, 50]
+2026-01-20 23:00:21 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.alert_time,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.location,
+        d1_0.monitor_status,
+        a1_0.alert_type,
+        a1_0.alert_level,
+        a1_0.context 
+    from
+        alert a1_0 
+    join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        (
+            ? is null 
+            or a1_0.alert_time>=?
+        ) 
+        and (
+            ? is null 
+            or a1_0.alert_time<=?
+        ) 
+        and (
+            ? is null 
+            or d1_0.device_code=?
+        ) 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:21 [http-nio-9091-exec-8] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:21 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:21 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getAlertDetailsByTimeRange，结果：{pageSize=50, content=[], totalElements=0, totalPages=0, currentPage=0}
+2026-01-20 23:00:21 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:21 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getDeviceAlertOverview，结果：[{deviceType=D4, operationalStatus=RUNNING, alertStatus=ON, latestAlertLevel=YELLOW, latestAlertTime=2025-07-13T10:05:04, location=loc1, deviceCode=001, deviceId=1, deviceName=Inoue Rin, monitorStatus=MONITORON, latestAlertContext=002}, {deviceType=DB, operationalStatus=RUNNING, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc2, deviceCode=002, deviceId=2, deviceName=Kong Lan, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc3, deviceCode=003, deviceId=3, deviceName=Chic Kwok Yin, monitorStatus=MONITORINTERRUPT, latestAlertContext=null}, {deviceType=D4, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc4, deviceCode=004, deviceId=4, deviceName=Lo Wai Lam, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc5, deviceCode=005, deviceId=5, deviceName=Saito Ayano, monitorStatus=MONITOROFF, latestAlertContext=null}]
+2026-01-20 23:00:42 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】UserService.getStaffByStaffcode，参数：[admin]
+2026-01-20 23:00:42 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorOnCountNow，参数：[]
+2026-01-20 23:00:42 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getCountAll，参数：[]
+2026-01-20 23:00:42 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorInterruptCountNow，参数：[]
+2026-01-20 23:00:42 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorOffCountNow，参数：[]
+2026-01-20 23:00:42 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffinfo s1_0 
+    where
+        s1_0.staffcode=?
+2026-01-20 23:00:42 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getDeviceAlertOverview，参数：[]
+2026-01-20 23:00:42 [http-nio-9091-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITORON'
+2026-01-20 23:00:42 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0
+2026-01-20 23:00:42 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITORINTERRUPT'
+2026-01-20 23:00:42 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITOROFF'
+2026-01-20 23:00:42 [http-nio-9091-exec-1] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:42 [http-nio-9091-exec-9] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:42 [http-nio-9091-exec-7] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:42 [http-nio-9091-exec-4] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:42 [http-nio-9091-exec-5] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:42 [http-nio-9091-exec-10] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:42 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getCountAll，结果：5
+2026-01-20 23:00:42 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:00:42 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorOffCountNow，结果：1
+2026-01-20 23:00:42 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorOnCountNow，结果：3
+2026-01-20 23:00:42 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        sr1_0.id,
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename,
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffrole sr1_0 
+    left join
+        roleinfo r1_0 
+            on r1_0.roleid=sr1_0.roleid 
+    left join
+        staffinfo s1_0 
+            on s1_0.staffid=sr1_0.staffid 
+    where
+        sr1_0.staffid=?
+2026-01-20 23:00:42 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorInterruptCountNow，结果：1
+2026-01-20 23:00:42 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】UserService.getStaffByStaffcode，结果：com.example.demo.entity.Staff@278cdd07
+2026-01-20 23:00:42 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】RoleService.getRoleById，参数：[1]
+2026-01-20 23:00:42 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:42 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename 
+    from
+        roleinfo r1_0 
+    where
+        r1_0.roleid=?
+2026-01-20 23:00:42 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:42 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】RoleService.getRoleById，结果：com.example.demo.entity.Role@174ac40d
+2026-01-20 23:00:42 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getAlertDetailsByTimeRange，参数：[2026-01-13T07:00, 2026-01-20T07:00, null, 0, 50]
+2026-01-20 23:00:42 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:42 [http-nio-9091-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.alert_time,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.location,
+        d1_0.monitor_status,
+        a1_0.alert_type,
+        a1_0.alert_level,
+        a1_0.context 
+    from
+        alert a1_0 
+    join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        (
+            ? is null 
+            or a1_0.alert_time>=?
+        ) 
+        and (
+            ? is null 
+            or a1_0.alert_time<=?
+        ) 
+        and (
+            ? is null 
+            or d1_0.device_code=?
+        ) 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:42 [http-nio-9091-exec-2] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:00:42 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:42 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getAlertDetailsByTimeRange，结果：{pageSize=50, content=[], totalElements=0, totalPages=0, currentPage=0}
+2026-01-20 23:00:42 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:00:42 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getDeviceAlertOverview，结果：[{deviceType=D4, operationalStatus=RUNNING, alertStatus=ON, latestAlertLevel=YELLOW, latestAlertTime=2025-07-13T10:05:04, location=loc1, deviceCode=001, deviceId=1, deviceName=Inoue Rin, monitorStatus=MONITORON, latestAlertContext=002}, {deviceType=DB, operationalStatus=RUNNING, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc2, deviceCode=002, deviceId=2, deviceName=Kong Lan, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc3, deviceCode=003, deviceId=3, deviceName=Chic Kwok Yin, monitorStatus=MONITORINTERRUPT, latestAlertContext=null}, {deviceType=D4, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc4, deviceCode=004, deviceId=4, deviceName=Lo Wai Lam, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc5, deviceCode=005, deviceId=5, deviceName=Saito Ayano, monitorStatus=MONITOROFF, latestAlertContext=null}]
+2026-01-20 23:01:47 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:01:47 [http-nio-9091-exec-3] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:01:47 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:01:47 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】InspectDataService.getLatestInspectionsWithDeviceInfo，参数：[]
+2026-01-20 23:01:47 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@57fffda0, com.example.demo.entity.Device@1ea49fa7, com.example.demo.entity.Device@2d15d05a, com.example.demo.entity.Device@34d24e50, com.example.demo.entity.Device@1c68a797]
+2026-01-20 23:01:47 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        id1_0.data_id,
+        id1_0.batch_no,
+        id1_0.create_time,
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at,
+        id1_0.diameter,
+        id1_0.friability,
+        id1_0.hardness,
+        id1_0.inspect_time,
+        id1_0.is_valid,
+        id1_0.product_id,
+        p1_0.product_id,
+        p1_0.product_name,
+        p1_0.specification,
+        id1_0.thickness,
+        id1_0.weight 
+    from
+        inspection_data id1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=id1_0.device_id 
+    join
+        product p1_0 
+            on p1_0.product_id=id1_0.product_id 
+    where
+        id1_0.inspect_time=(
+            select
+                max(id2_0.inspect_time) 
+            from
+                inspection_data id2_0 
+            where
+                id2_0.device_id=id1_0.device_id 
+                and id2_0.is_valid=1
+        )
+2026-01-20 23:01:47 [http-nio-9091-exec-8] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:01:47 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】InspectDataService.getLatestInspectionsWithDeviceInfo，结果：[com.example.demo.entity.InspectionData@238ef693, com.example.demo.entity.InspectionData@4f995778]
+2026-01-20 23:02:12 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:02:12 [http-nio-9091-exec-6] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:02:12 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:02:12 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@7c39c35d, com.example.demo.entity.Device@4bc6b7ff, com.example.demo.entity.Device@2db6892b, com.example.demo.entity.Device@4f879364, com.example.demo.entity.Device@7d9692e2]
+2026-01-20 23:02:13 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getDeviceAlertOverview，参数：[]
+2026-01-20 23:02:13 [http-nio-9091-exec-5] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:02:13 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:02:13 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getAlertDetailsByTimeRange，参数：[2026-01-13T07:02, 2026-01-20T07:02, null, 0, 50]
+2026-01-20 23:02:13 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.alert_time,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.location,
+        d1_0.monitor_status,
+        a1_0.alert_type,
+        a1_0.alert_level,
+        a1_0.context 
+    from
+        alert a1_0 
+    join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        (
+            ? is null 
+            or a1_0.alert_time>=?
+        ) 
+        and (
+            ? is null 
+            or a1_0.alert_time<=?
+        ) 
+        and (
+            ? is null 
+            or d1_0.device_code=?
+        ) 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:13 [http-nio-9091-exec-4] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:02:13 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:13 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getAlertDetailsByTimeRange，结果：{pageSize=50, content=[], totalElements=0, totalPages=0, currentPage=0}
+2026-01-20 23:02:13 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:13 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:13 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:13 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:13 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getDeviceAlertOverview，结果：[{deviceType=D4, operationalStatus=RUNNING, alertStatus=ON, latestAlertLevel=YELLOW, latestAlertTime=2025-07-13T10:05:04, location=loc1, deviceCode=001, deviceId=1, deviceName=Inoue Rin, monitorStatus=MONITORON, latestAlertContext=002}, {deviceType=DB, operationalStatus=RUNNING, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc2, deviceCode=002, deviceId=2, deviceName=Kong Lan, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc3, deviceCode=003, deviceId=3, deviceName=Chic Kwok Yin, monitorStatus=MONITORINTERRUPT, latestAlertContext=null}, {deviceType=D4, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc4, deviceCode=004, deviceId=4, deviceName=Lo Wai Lam, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc5, deviceCode=005, deviceId=5, deviceName=Saito Ayano, monitorStatus=MONITOROFF, latestAlertContext=null}]
+2026-01-20 23:02:14 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:02:14 [http-nio-9091-exec-7] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:02:14 [http-nio-9091-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:02:14 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】InspectDataService.getLatestInspectionsWithDeviceInfo，参数：[]
+2026-01-20 23:02:14 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@40146e31, com.example.demo.entity.Device@426b1aaf, com.example.demo.entity.Device@2a5a7985, com.example.demo.entity.Device@249eb170, com.example.demo.entity.Device@47182634]
+2026-01-20 23:02:14 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        id1_0.data_id,
+        id1_0.batch_no,
+        id1_0.create_time,
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at,
+        id1_0.diameter,
+        id1_0.friability,
+        id1_0.hardness,
+        id1_0.inspect_time,
+        id1_0.is_valid,
+        id1_0.product_id,
+        p1_0.product_id,
+        p1_0.product_name,
+        p1_0.specification,
+        id1_0.thickness,
+        id1_0.weight 
+    from
+        inspection_data id1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=id1_0.device_id 
+    join
+        product p1_0 
+            on p1_0.product_id=id1_0.product_id 
+    where
+        id1_0.inspect_time=(
+            select
+                max(id2_0.inspect_time) 
+            from
+                inspection_data id2_0 
+            where
+                id2_0.device_id=id1_0.device_id 
+                and id2_0.is_valid=1
+        )
+2026-01-20 23:02:14 [http-nio-9091-exec-10] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:02:14 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】InspectDataService.getLatestInspectionsWithDeviceInfo，结果：[com.example.demo.entity.InspectionData@1139907, com.example.demo.entity.InspectionData@7c65103b]
+2026-01-20 23:02:14 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getDeviceAlertOverview，参数：[]
+2026-01-20 23:02:14 [http-nio-9091-exec-9] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:02:14 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:02:14 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getAlertDetailsByTimeRange，参数：[2026-01-13T07:02, 2026-01-20T07:02, null, 0, 50]
+2026-01-20 23:02:14 [http-nio-9091-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.alert_time,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.location,
+        d1_0.monitor_status,
+        a1_0.alert_type,
+        a1_0.alert_level,
+        a1_0.context 
+    from
+        alert a1_0 
+    join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        (
+            ? is null 
+            or a1_0.alert_time>=?
+        ) 
+        and (
+            ? is null 
+            or a1_0.alert_time<=?
+        ) 
+        and (
+            ? is null 
+            or d1_0.device_code=?
+        ) 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:14 [http-nio-9091-exec-2] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:02:14 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:14 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getAlertDetailsByTimeRange，结果：{pageSize=50, content=[], totalElements=0, totalPages=0, currentPage=0}
+2026-01-20 23:02:14 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:14 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:14 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:14 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:02:14 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getDeviceAlertOverview，结果：[{deviceType=D4, operationalStatus=RUNNING, alertStatus=ON, latestAlertLevel=YELLOW, latestAlertTime=2025-07-13T10:05:04, location=loc1, deviceCode=001, deviceId=1, deviceName=Inoue Rin, monitorStatus=MONITORON, latestAlertContext=002}, {deviceType=DB, operationalStatus=RUNNING, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc2, deviceCode=002, deviceId=2, deviceName=Kong Lan, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc3, deviceCode=003, deviceId=3, deviceName=Chic Kwok Yin, monitorStatus=MONITORINTERRUPT, latestAlertContext=null}, {deviceType=D4, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc4, deviceCode=004, deviceId=4, deviceName=Lo Wai Lam, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc5, deviceCode=005, deviceId=5, deviceName=Saito Ayano, monitorStatus=MONITOROFF, latestAlertContext=null}]
+2026-01-20 23:02:15 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:02:15 [http-nio-9091-exec-1] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:02:15 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:02:15 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】InspectDataService.getLatestInspectionsWithDeviceInfo，参数：[]
+2026-01-20 23:02:15 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@e1850de, com.example.demo.entity.Device@e53cf7a, com.example.demo.entity.Device@26cc3225, com.example.demo.entity.Device@3cfb1b7e, com.example.demo.entity.Device@70a9229f]
+2026-01-20 23:02:15 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        id1_0.data_id,
+        id1_0.batch_no,
+        id1_0.create_time,
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at,
+        id1_0.diameter,
+        id1_0.friability,
+        id1_0.hardness,
+        id1_0.inspect_time,
+        id1_0.is_valid,
+        id1_0.product_id,
+        p1_0.product_id,
+        p1_0.product_name,
+        p1_0.specification,
+        id1_0.thickness,
+        id1_0.weight 
+    from
+        inspection_data id1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=id1_0.device_id 
+    join
+        product p1_0 
+            on p1_0.product_id=id1_0.product_id 
+    where
+        id1_0.inspect_time=(
+            select
+                max(id2_0.inspect_time) 
+            from
+                inspection_data id2_0 
+            where
+                id2_0.device_id=id1_0.device_id 
+                and id2_0.is_valid=1
+        )
+2026-01-20 23:02:15 [http-nio-9091-exec-3] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:02:15 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】InspectDataService.getLatestInspectionsWithDeviceInfo，结果：[com.example.demo.entity.InspectionData@33f1fc4b, com.example.demo.entity.InspectionData@71c24876]
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】UserService.login，参数：[admin, 123456]
+2026-01-20 23:03:51 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffinfo s1_0 
+    where
+        s1_0.staffcode=?
+2026-01-20 23:03:51 [http-nio-9091-exec-8] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:51 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        sr1_0.id,
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename,
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffrole sr1_0 
+    left join
+        roleinfo r1_0 
+            on r1_0.roleid=sr1_0.roleid 
+    left join
+        staffinfo s1_0 
+            on s1_0.staffid=sr1_0.staffid 
+    where
+        sr1_0.staffid=?
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】UserService.login，结果：com.example.demo.entity.Staff@666aeb35
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】UserService.getPermByStaffcode，参数：[admin]
+2026-01-20 23:03:51 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.permissionid,
+        p1_0.permission,
+        p1_0.permission_code 
+    from
+        staffinfo s1_0 
+    join
+        staffrole sr1_0 
+            on s1_0.staffid=sr1_0.staffid 
+    join
+        roleinfo r1_0 
+            on r1_0.roleid=sr1_0.roleid 
+    join
+        roleprm rp1_0 
+            on r1_0.roleid=rp1_0.roleid 
+    join
+        permissioninfo p1_0 
+            on p1_0.permissionid=rp1_0.permissionid 
+    where
+        s1_0.staffcode=?
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】UserService.getPermByStaffcode，结果：[com.example.demo.entity.Permission@3ae240fa, com.example.demo.entity.Permission@6eb5cc06, com.example.demo.entity.Permission@4f223518, com.example.demo.entity.Permission@49545a1, com.example.demo.entity.Permission@475706d5, com.example.demo.entity.Permission@2ea0e1a2]
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】UserService.getStaffByStaffcode，参数：[admin]
+2026-01-20 23:03:51 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffinfo s1_0 
+    where
+        s1_0.staffcode=?
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】UserService.getStaffByStaffcode，结果：com.example.demo.entity.Staff@666aeb35
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】RoleService.getRoleById，参数：[1]
+2026-01-20 23:03:51 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename 
+    from
+        roleinfo r1_0 
+    where
+        r1_0.roleid=?
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】RoleService.getRoleById，结果：com.example.demo.entity.Role@5aabdcb
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】UserService.loadUserByUsername，参数：[admin]
+2026-01-20 23:03:51 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffinfo s1_0 
+    where
+        s1_0.staffcode=?
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】UserService.loadUserByUsername，结果：org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[]]
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】UserService.loadUserByUsername，参数：[admin]
+2026-01-20 23:03:51 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffinfo s1_0 
+    where
+        s1_0.staffcode=?
+2026-01-20 23:03:51 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】UserService.loadUserByUsername，结果：org.springframework.security.core.userdetails.User [Username=admin, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[]]
+2026-01-20 23:03:51 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】UserService.getStaffByStaffcode，参数：[admin]
+2026-01-20 23:03:51 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffinfo s1_0 
+    where
+        s1_0.staffcode=?
+2026-01-20 23:03:51 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getTodayAlertCount，参数：[2026-01-20 23:03:51]
+2026-01-20 23:03:51 [http-nio-9091-exec-4] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:51 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        count(a1_0.id) 
+    from
+        alert a1_0 
+    where
+        date(a1_0.alert_time)=date(?)
+2026-01-20 23:03:51 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getCountAll，参数：[]
+2026-01-20 23:03:51 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getAlertDetails，参数：[0, 10]
+2026-01-20 23:03:51 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getWaitCalibrationCountNow，参数：[]
+2026-01-20 23:03:51 [http-nio-9091-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0
+2026-01-20 23:03:51 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getWeekAlertSummary，参数：[2026-01-20 15:03:51]
+2026-01-20 23:03:51 [http-nio-9091-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.alert_time,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.location,
+        d1_0.monitor_status,
+        a1_0.alert_type,
+        a1_0.alert_level,
+        a1_0.context 
+    from
+        alert a1_0 
+    join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:51 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.calibration_status='PENDING'
+2026-01-20 23:03:51 [http-nio-9091-exec-6] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:51 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        sr1_0.id,
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename,
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffrole sr1_0 
+    left join
+        roleinfo r1_0 
+            on r1_0.roleid=sr1_0.roleid 
+    left join
+        staffinfo s1_0 
+            on s1_0.staffid=sr1_0.staffid 
+    where
+        sr1_0.staffid=?
+2026-01-20 23:03:51 [http-nio-9091-exec-7] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:51 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(a1_0.id) 
+    from
+        alert a1_0 
+    where
+        yearweek(a1_0.alert_time, 1)=yearweek(?, 1) 
+        and a1_0.alert_level='YELLOW'
+2026-01-20 23:03:51 [http-nio-9091-exec-2] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:51 [http-nio-9091-exec-10] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:51 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getTodayAlertCount，结果：0
+2026-01-20 23:03:51 [http-nio-9091-exec-5] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:51 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getCountAll，结果：5
+2026-01-20 23:03:51 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】UserService.getStaffByStaffcode，结果：com.example.demo.entity.Staff@16bcf385
+2026-01-20 23:03:51 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getWaitCalibrationCountNow，结果：1
+2026-01-20 23:03:51 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】RoleService.getRoleById，参数：[1]
+2026-01-20 23:03:51 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getAlertDetails，结果：{pageSize=10, content=[{context=002, location=loc1, alertType=DRUG, deviceType=D4, deviceName=Inoue Rin, alertLevel=YELLOW, alertTime=2025-07-13T10:05:04, deviceCode=001, monitorStatus=MONITORON}, {context=001, location=loc1, alertType=DRUG, deviceType=D4, deviceName=Inoue Rin, alertLevel=RED, alertTime=2025-07-13T10:05:01, deviceCode=001, monitorStatus=MONITORON}, {context=000, location=loc1, alertType=MECHINE, deviceType=D4, deviceName=Inoue Rin, alertLevel=YELLOW, alertTime=2025-07-11T10:04:58, deviceCode=001, monitorStatus=MONITORON}], totalElements=3, totalPages=1, currentPage=0}
+2026-01-20 23:03:51 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(a1_0.id) 
+    from
+        alert a1_0 
+    where
+        yearweek(a1_0.alert_time, 1)=yearweek(?, 1) 
+        and a1_0.alert_level='RED'
+2026-01-20 23:03:51 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename 
+    from
+        roleinfo r1_0 
+    where
+        r1_0.roleid=?
+2026-01-20 23:03:51 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(a1_0.id) 
+    from
+        alert a1_0 
+    where
+        yearweek(a1_0.alert_time, 1)=yearweek(?, 1) 
+        and a1_0.alert_type='MECHINE'
+2026-01-20 23:03:51 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】RoleService.getRoleById，结果：com.example.demo.entity.Role@6e32aa46
+2026-01-20 23:03:51 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getWeekAlertSummary，结果：{machineFailure=0, yellowAlert=0, redAlert=0}
+2026-01-20 23:03:51 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorOnCountNow，参数：[]
+2026-01-20 23:03:51 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getDeviceByStaffCode，参数：[admin]
+2026-01-20 23:03:51 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITORON'
+2026-01-20 23:03:51 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        staffdevice sd1_0 
+    join
+        devices d1_0 
+            on d1_0.device_code=sd1_0.device_code 
+    where
+        sd1_0.staffcode=?
+2026-01-20 23:03:51 [http-nio-9091-exec-1] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:51 [http-nio-9091-exec-9] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:51 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorOnCountNow，结果：3
+2026-01-20 23:03:51 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getDeviceByStaffCode，结果：[]
+2026-01-20 23:03:51 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAlertOnCountNow，参数：[]
+2026-01-20 23:03:51 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.alert_status='ON'
+2026-01-20 23:03:51 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAlertOnCountNow，结果：1
+2026-01-20 23:03:51 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getOperationalOnCountNow，参数：[]
+2026-01-20 23:03:51 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.operational_status='RUNNING'
+2026-01-20 23:03:51 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getOperationalOnCountNow，结果：2
+2026-01-20 23:03:51 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getOperationalOfflineCountNow，参数：[]
+2026-01-20 23:03:51 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.operational_status='OFFLINE'
+2026-01-20 23:03:51 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getOperationalOfflineCountNow，结果：3
+2026-01-20 23:03:53 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getCountAll，参数：[]
+2026-01-20 23:03:53 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0
+2026-01-20 23:03:53 [http-nio-9091-exec-3] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:53 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getCountAll，结果：5
+2026-01-20 23:03:53 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:03:53 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorInterruptCountNow，参数：[]
+2026-01-20 23:03:53 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】InspectDataService.getLatestInspectionsWithDeviceInfo，参数：[]
+2026-01-20 23:03:53 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorOnCountNow，参数：[]
+2026-01-20 23:03:53 [http-nio-9091-exec-8] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:53 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorOffCountNow，参数：[]
+2026-01-20 23:03:53 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITORON'
+2026-01-20 23:03:53 [http-nio-9091-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITOROFF'
+2026-01-20 23:03:53 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITORINTERRUPT'
+2026-01-20 23:03:53 [http-nio-9091-exec-6] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:53 [http-nio-9091-exec-10] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:53 [http-nio-9091-exec-2] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:53 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:03:53 [http-nio-9091-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        id1_0.data_id,
+        id1_0.batch_no,
+        id1_0.create_time,
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at,
+        id1_0.diameter,
+        id1_0.friability,
+        id1_0.hardness,
+        id1_0.inspect_time,
+        id1_0.is_valid,
+        id1_0.product_id,
+        p1_0.product_id,
+        p1_0.product_name,
+        p1_0.specification,
+        id1_0.thickness,
+        id1_0.weight 
+    from
+        inspection_data id1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=id1_0.device_id 
+    join
+        product p1_0 
+            on p1_0.product_id=id1_0.product_id 
+    where
+        id1_0.inspect_time=(
+            select
+                max(id2_0.inspect_time) 
+            from
+                inspection_data id2_0 
+            where
+                id2_0.device_id=id1_0.device_id 
+                and id2_0.is_valid=1
+        )
+2026-01-20 23:03:53 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorInterruptCountNow，结果：1
+2026-01-20 23:03:53 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorOffCountNow，结果：1
+2026-01-20 23:03:53 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorOnCountNow，结果：3
+2026-01-20 23:03:53 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@43d747d, com.example.demo.entity.Device@43911de9, com.example.demo.entity.Device@3a8facdb, com.example.demo.entity.Device@1f4bd067, com.example.demo.entity.Device@70bad16f]
+2026-01-20 23:03:53 [http-nio-9091-exec-7] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:53 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】InspectDataService.getLatestInspectionsWithDeviceInfo，结果：[com.example.demo.entity.InspectionData@5cdc877b, com.example.demo.entity.InspectionData@716b1be2]
+2026-01-20 23:03:54 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getDeviceAlertOverview，参数：[]
+2026-01-20 23:03:54 [http-nio-9091-exec-4] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:54 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getAlertDetailsByTimeRange，参数：[2026-01-13T07:03, 2026-01-20T07:03, null, 0, 50]
+2026-01-20 23:03:54 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:03:54 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.alert_time,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.location,
+        d1_0.monitor_status,
+        a1_0.alert_type,
+        a1_0.alert_level,
+        a1_0.context 
+    from
+        alert a1_0 
+    join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        (
+            ? is null 
+            or a1_0.alert_time>=?
+        ) 
+        and (
+            ? is null 
+            or a1_0.alert_time<=?
+        ) 
+        and (
+            ? is null 
+            or d1_0.device_code=?
+        ) 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:54 [http-nio-9091-exec-5] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:54 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getAlertDetailsByTimeRange，结果：{pageSize=50, content=[], totalElements=0, totalPages=0, currentPage=0}
+2026-01-20 23:03:54 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:54 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:54 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:54 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:54 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:54 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getDeviceAlertOverview，结果：[{deviceType=D4, operationalStatus=RUNNING, alertStatus=ON, latestAlertLevel=YELLOW, latestAlertTime=2025-07-13T10:05:04, location=loc1, deviceCode=001, deviceId=1, deviceName=Inoue Rin, monitorStatus=MONITORON, latestAlertContext=002}, {deviceType=DB, operationalStatus=RUNNING, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc2, deviceCode=002, deviceId=2, deviceName=Kong Lan, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc3, deviceCode=003, deviceId=3, deviceName=Chic Kwok Yin, monitorStatus=MONITORINTERRUPT, latestAlertContext=null}, {deviceType=D4, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc4, deviceCode=004, deviceId=4, deviceName=Lo Wai Lam, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc5, deviceCode=005, deviceId=5, deviceName=Saito Ayano, monitorStatus=MONITOROFF, latestAlertContext=null}]
+2026-01-20 23:03:55 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:03:55 [http-nio-9091-exec-9] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:55 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:03:55 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】InspectDataService.getLatestInspectionsWithDeviceInfo，参数：[]
+2026-01-20 23:03:55 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@2dd6f9c3, com.example.demo.entity.Device@bc21574, com.example.demo.entity.Device@349194a1, com.example.demo.entity.Device@40286d15, com.example.demo.entity.Device@5aaa9c32]
+2026-01-20 23:03:55 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        id1_0.data_id,
+        id1_0.batch_no,
+        id1_0.create_time,
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at,
+        id1_0.diameter,
+        id1_0.friability,
+        id1_0.hardness,
+        id1_0.inspect_time,
+        id1_0.is_valid,
+        id1_0.product_id,
+        p1_0.product_id,
+        p1_0.product_name,
+        p1_0.specification,
+        id1_0.thickness,
+        id1_0.weight 
+    from
+        inspection_data id1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=id1_0.device_id 
+    join
+        product p1_0 
+            on p1_0.product_id=id1_0.product_id 
+    where
+        id1_0.inspect_time=(
+            select
+                max(id2_0.inspect_time) 
+            from
+                inspection_data id2_0 
+            where
+                id2_0.device_id=id1_0.device_id 
+                and id2_0.is_valid=1
+        )
+2026-01-20 23:03:55 [http-nio-9091-exec-1] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:55 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】InspectDataService.getLatestInspectionsWithDeviceInfo，结果：[com.example.demo.entity.InspectionData@3fa72fdc, com.example.demo.entity.InspectionData@5b2bd176]
+2026-01-20 23:03:56 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getDeviceAlertOverview，参数：[]
+2026-01-20 23:03:56 [http-nio-9091-exec-3] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:56 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getAlertDetailsByTimeRange，参数：[2026-01-13T07:03, 2026-01-20T07:03, null, 0, 50]
+2026-01-20 23:03:56 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.alert_time,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.location,
+        d1_0.monitor_status,
+        a1_0.alert_type,
+        a1_0.alert_level,
+        a1_0.context 
+    from
+        alert a1_0 
+    join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        (
+            ? is null 
+            or a1_0.alert_time>=?
+        ) 
+        and (
+            ? is null 
+            or a1_0.alert_time<=?
+        ) 
+        and (
+            ? is null 
+            or d1_0.device_code=?
+        ) 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:56 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:03:56 [http-nio-9091-exec-10] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:56 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getAlertDetailsByTimeRange，结果：{pageSize=50, content=[], totalElements=0, totalPages=0, currentPage=0}
+2026-01-20 23:03:56 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:56 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:56 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:56 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:56 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:56 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getDeviceAlertOverview，结果：[{deviceType=D4, operationalStatus=RUNNING, alertStatus=ON, latestAlertLevel=YELLOW, latestAlertTime=2025-07-13T10:05:04, location=loc1, deviceCode=001, deviceId=1, deviceName=Inoue Rin, monitorStatus=MONITORON, latestAlertContext=002}, {deviceType=DB, operationalStatus=RUNNING, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc2, deviceCode=002, deviceId=2, deviceName=Kong Lan, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc3, deviceCode=003, deviceId=3, deviceName=Chic Kwok Yin, monitorStatus=MONITORINTERRUPT, latestAlertContext=null}, {deviceType=D4, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc4, deviceCode=004, deviceId=4, deviceName=Lo Wai Lam, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc5, deviceCode=005, deviceId=5, deviceName=Saito Ayano, monitorStatus=MONITOROFF, latestAlertContext=null}]
+2026-01-20 23:03:56 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:03:56 [http-nio-9091-exec-2] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:56 [http-nio-9091-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:03:56 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@108ce432, com.example.demo.entity.Device@2d8f7b7, com.example.demo.entity.Device@57fc7424, com.example.demo.entity.Device@3d17e463, com.example.demo.entity.Device@4a4d3a87]
+2026-01-20 23:03:57 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getDeviceAlertOverview，参数：[]
+2026-01-20 23:03:57 [http-nio-9091-exec-6] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:57 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getAlertDetailsByTimeRange，参数：[2026-01-13T07:03, 2026-01-20T07:03, null, 0, 50]
+2026-01-20 23:03:57 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.alert_time,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.location,
+        d1_0.monitor_status,
+        a1_0.alert_type,
+        a1_0.alert_level,
+        a1_0.context 
+    from
+        alert a1_0 
+    join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        (
+            ? is null 
+            or a1_0.alert_time>=?
+        ) 
+        and (
+            ? is null 
+            or a1_0.alert_time<=?
+        ) 
+        and (
+            ? is null 
+            or d1_0.device_code=?
+        ) 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:57 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:03:57 [http-nio-9091-exec-8] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:03:57 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getAlertDetailsByTimeRange，结果：{pageSize=50, content=[], totalElements=0, totalPages=0, currentPage=0}
+2026-01-20 23:03:57 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:57 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:57 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:57 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:57 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:03:57 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getDeviceAlertOverview，结果：[{deviceType=D4, operationalStatus=RUNNING, alertStatus=ON, latestAlertLevel=YELLOW, latestAlertTime=2025-07-13T10:05:04, location=loc1, deviceCode=001, deviceId=1, deviceName=Inoue Rin, monitorStatus=MONITORON, latestAlertContext=002}, {deviceType=DB, operationalStatus=RUNNING, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc2, deviceCode=002, deviceId=2, deviceName=Kong Lan, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc3, deviceCode=003, deviceId=3, deviceName=Chic Kwok Yin, monitorStatus=MONITORINTERRUPT, latestAlertContext=null}, {deviceType=D4, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc4, deviceCode=004, deviceId=4, deviceName=Lo Wai Lam, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc5, deviceCode=005, deviceId=5, deviceName=Saito Ayano, monitorStatus=MONITOROFF, latestAlertContext=null}]
+2026-01-20 23:13:10 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:13:10 [http-nio-9091-exec-7] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:10 [http-nio-9091-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:13:10 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@1f313903, com.example.demo.entity.Device@7e53af5a, com.example.demo.entity.Device@30951514, com.example.demo.entity.Device@7a1ff255, com.example.demo.entity.Device@6c703534]
+2026-01-20 23:13:11 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getDeviceAlertOverview，参数：[]
+2026-01-20 23:13:11 [http-nio-9091-exec-5] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:11 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getAlertDetailsByTimeRange，参数：[2026-01-13T07:13, 2026-01-20T07:13, null, 0, 50]
+2026-01-20 23:13:11 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.alert_time,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.location,
+        d1_0.monitor_status,
+        a1_0.alert_type,
+        a1_0.alert_level,
+        a1_0.context 
+    from
+        alert a1_0 
+    join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        (
+            ? is null 
+            or a1_0.alert_time>=?
+        ) 
+        and (
+            ? is null 
+            or a1_0.alert_time<=?
+        ) 
+        and (
+            ? is null 
+            or d1_0.device_code=?
+        ) 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:11 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:13:11 [http-nio-9091-exec-4] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:11 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getAlertDetailsByTimeRange，结果：{pageSize=50, content=[], totalElements=0, totalPages=0, currentPage=0}
+2026-01-20 23:13:11 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:11 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:11 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:11 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:11 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:11 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getDeviceAlertOverview，结果：[{deviceType=D4, operationalStatus=RUNNING, alertStatus=ON, latestAlertLevel=YELLOW, latestAlertTime=2025-07-13T10:05:04, location=loc1, deviceCode=001, deviceId=1, deviceName=Inoue Rin, monitorStatus=MONITORON, latestAlertContext=002}, {deviceType=DB, operationalStatus=RUNNING, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc2, deviceCode=002, deviceId=2, deviceName=Kong Lan, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc3, deviceCode=003, deviceId=3, deviceName=Chic Kwok Yin, monitorStatus=MONITORINTERRUPT, latestAlertContext=null}, {deviceType=D4, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc4, deviceCode=004, deviceId=4, deviceName=Lo Wai Lam, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc5, deviceCode=005, deviceId=5, deviceName=Saito Ayano, monitorStatus=MONITOROFF, latestAlertContext=null}]
+2026-01-20 23:13:11 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:13:11 [http-nio-9091-exec-9] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:11 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:13:11 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】InspectDataService.getLatestInspectionsWithDeviceInfo，参数：[]
+2026-01-20 23:13:11 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@5cef5cbb, com.example.demo.entity.Device@6c76dbc3, com.example.demo.entity.Device@78dd2d82, com.example.demo.entity.Device@7d64f54d, com.example.demo.entity.Device@5bc864de]
+2026-01-20 23:13:11 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        id1_0.data_id,
+        id1_0.batch_no,
+        id1_0.create_time,
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at,
+        id1_0.diameter,
+        id1_0.friability,
+        id1_0.hardness,
+        id1_0.inspect_time,
+        id1_0.is_valid,
+        id1_0.product_id,
+        p1_0.product_id,
+        p1_0.product_name,
+        p1_0.specification,
+        id1_0.thickness,
+        id1_0.weight 
+    from
+        inspection_data id1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=id1_0.device_id 
+    join
+        product p1_0 
+            on p1_0.product_id=id1_0.product_id 
+    where
+        id1_0.inspect_time=(
+            select
+                max(id2_0.inspect_time) 
+            from
+                inspection_data id2_0 
+            where
+                id2_0.device_id=id1_0.device_id 
+                and id2_0.is_valid=1
+        )
+2026-01-20 23:13:11 [http-nio-9091-exec-1] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:11 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】InspectDataService.getLatestInspectionsWithDeviceInfo，结果：[com.example.demo.entity.InspectionData@1e7a4f9a, com.example.demo.entity.InspectionData@32a13963]
+2026-01-20 23:13:12 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getDeviceAlertOverview，参数：[]
+2026-01-20 23:13:12 [http-nio-9091-exec-10] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:12 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】AlertService.getAlertDetailsByTimeRange，参数：[2026-01-13T07:13, 2026-01-20T07:13, null, 0, 50]
+2026-01-20 23:13:12 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:13:12 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.alert_time,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.location,
+        d1_0.monitor_status,
+        a1_0.alert_type,
+        a1_0.alert_level,
+        a1_0.context 
+    from
+        alert a1_0 
+    join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        (
+            ? is null 
+            or a1_0.alert_time>=?
+        ) 
+        and (
+            ? is null 
+            or a1_0.alert_time<=?
+        ) 
+        and (
+            ? is null 
+            or d1_0.device_code=?
+        ) 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:12 [http-nio-9091-exec-3] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:12 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getAlertDetailsByTimeRange，结果：{pageSize=50, content=[], totalElements=0, totalPages=0, currentPage=0}
+2026-01-20 23:13:12 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:12 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:12 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:12 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:12 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        a1_0.id,
+        a1_0.alert_level,
+        a1_0.alert_time,
+        a1_0.alert_type,
+        a1_0.context,
+        a1_0.device_id 
+    from
+        alert a1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=a1_0.device_id 
+    where
+        d1_0.deviceid=? 
+    order by
+        a1_0.alert_time desc 
+    limit
+        ?
+2026-01-20 23:13:12 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】AlertService.getDeviceAlertOverview，结果：[{deviceType=D4, operationalStatus=RUNNING, alertStatus=ON, latestAlertLevel=YELLOW, latestAlertTime=2025-07-13T10:05:04, location=loc1, deviceCode=001, deviceId=1, deviceName=Inoue Rin, monitorStatus=MONITORON, latestAlertContext=002}, {deviceType=DB, operationalStatus=RUNNING, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc2, deviceCode=002, deviceId=2, deviceName=Kong Lan, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc3, deviceCode=003, deviceId=3, deviceName=Chic Kwok Yin, monitorStatus=MONITORINTERRUPT, latestAlertContext=null}, {deviceType=D4, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc4, deviceCode=004, deviceId=4, deviceName=Lo Wai Lam, monitorStatus=MONITORON, latestAlertContext=null}, {deviceType=DB, operationalStatus=OFFLINE, alertStatus=OFF, latestAlertLevel=null, latestAlertTime=null, location=loc5, deviceCode=005, deviceId=5, deviceName=Saito Ayano, monitorStatus=MONITOROFF, latestAlertContext=null}]
+2026-01-20 23:13:12 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:13:12 [http-nio-9091-exec-2] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:12 [http-nio-9091-exec-2] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:13:12 [http-nio-9091-exec-2] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@32f8612b, com.example.demo.entity.Device@18902605, com.example.demo.entity.Device@6452b22d, com.example.demo.entity.Device@7f553f82, com.example.demo.entity.Device@e55f87a]
+2026-01-20 23:13:12 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:13:12 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】InspectDataService.getLatestInspectionsWithDeviceInfo，参数：[]
+2026-01-20 23:13:12 [http-nio-9091-exec-8] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:12 [http-nio-9091-exec-8] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:13:12 [http-nio-9091-exec-6] DEBUG org.hibernate.SQL - 
+    select
+        id1_0.data_id,
+        id1_0.batch_no,
+        id1_0.create_time,
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at,
+        id1_0.diameter,
+        id1_0.friability,
+        id1_0.hardness,
+        id1_0.inspect_time,
+        id1_0.is_valid,
+        id1_0.product_id,
+        p1_0.product_id,
+        p1_0.product_name,
+        p1_0.specification,
+        id1_0.thickness,
+        id1_0.weight 
+    from
+        inspection_data id1_0 
+    left join
+        devices d1_0 
+            on d1_0.deviceid=id1_0.device_id 
+    join
+        product p1_0 
+            on p1_0.product_id=id1_0.product_id 
+    where
+        id1_0.inspect_time=(
+            select
+                max(id2_0.inspect_time) 
+            from
+                inspection_data id2_0 
+            where
+                id2_0.device_id=id1_0.device_id 
+                and id2_0.is_valid=1
+        )
+2026-01-20 23:13:12 [http-nio-9091-exec-6] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:12 [http-nio-9091-exec-6] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】InspectDataService.getLatestInspectionsWithDeviceInfo，结果：[com.example.demo.entity.InspectionData@401913a, com.example.demo.entity.InspectionData@37bb91aa]
+2026-01-20 23:13:12 [http-nio-9091-exec-8] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@5f009388, com.example.demo.entity.Device@70d1d2c5, com.example.demo.entity.Device@33baa1d7, com.example.demo.entity.Device@53bf0ab0, com.example.demo.entity.Device@8784f9c]
+2026-01-20 23:13:12 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】PermissionAdminService.getAllStaff，参数：[]
+2026-01-20 23:13:12 [http-nio-9091-exec-7] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:12 [http-nio-9091-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffinfo s1_0
+2026-01-20 23:13:12 [http-nio-9091-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        sr1_0.id,
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename,
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffrole sr1_0 
+    left join
+        roleinfo r1_0 
+            on r1_0.roleid=sr1_0.roleid 
+    left join
+        staffinfo s1_0 
+            on s1_0.staffid=sr1_0.staffid 
+    where
+        sr1_0.staffid=?
+2026-01-20 23:13:12 [http-nio-9091-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        sr1_0.id,
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename,
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffrole sr1_0 
+    left join
+        roleinfo r1_0 
+            on r1_0.roleid=sr1_0.roleid 
+    left join
+        staffinfo s1_0 
+            on s1_0.staffid=sr1_0.staffid 
+    where
+        sr1_0.staffid=?
+2026-01-20 23:13:12 [http-nio-9091-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        sr1_0.id,
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename,
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffrole sr1_0 
+    left join
+        roleinfo r1_0 
+            on r1_0.roleid=sr1_0.roleid 
+    left join
+        staffinfo s1_0 
+            on s1_0.staffid=sr1_0.staffid 
+    where
+        sr1_0.staffid=?
+2026-01-20 23:13:12 [http-nio-9091-exec-7] DEBUG org.hibernate.SQL - 
+    select
+        sr1_0.id,
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename,
+        s1_0.staffid,
+        s1_0.department,
+        s1_0.password,
+        s1_0.staffcode,
+        s1_0.staffname 
+    from
+        staffrole sr1_0 
+    left join
+        roleinfo r1_0 
+            on r1_0.roleid=sr1_0.roleid 
+    left join
+        staffinfo s1_0 
+            on s1_0.staffid=sr1_0.staffid 
+    where
+        sr1_0.staffid=?
+2026-01-20 23:13:12 [http-nio-9091-exec-7] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】PermissionAdminService.getAllStaff，结果：[com.example.demo.entity.Staff@1eed1fcd, com.example.demo.entity.Staff@7d061750, com.example.demo.entity.Staff@1eff15ce, com.example.demo.entity.Staff@3e1413bd]
+2026-01-20 23:13:12 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】RoleService.getAllRoles，参数：[]
+2026-01-20 23:13:12 [http-nio-9091-exec-4] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:12 [http-nio-9091-exec-4] DEBUG org.hibernate.SQL - 
+    select
+        r1_0.roleid,
+        r1_0.roledescription,
+        r1_0.rolename 
+    from
+        roleinfo r1_0
+2026-01-20 23:13:12 [http-nio-9091-exec-4] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】RoleService.getAllRoles，结果：[com.example.demo.entity.Role@3b2e049d, com.example.demo.entity.Role@64bd5834, com.example.demo.entity.Role@5449852a, com.example.demo.entity.Role@7afd6d4b, com.example.demo.entity.Role@2ef491eb]
+2026-01-20 23:13:13 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorOnCountNow，参数：[]
+2026-01-20 23:13:13 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getAllDevices，参数：[]
+2026-01-20 23:13:13 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getCountAll，参数：[]
+2026-01-20 23:13:13 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorOffCountNow，参数：[]
+2026-01-20 23:13:13 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用开始】DeviceService.getMonitorInterruptCountNow，参数：[]
+2026-01-20 23:13:13 [http-nio-9091-exec-1] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITORON'
+2026-01-20 23:13:13 [http-nio-9091-exec-10] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:13 [http-nio-9091-exec-5] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0
+2026-01-20 23:13:13 [http-nio-9091-exec-3] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITOROFF'
+2026-01-20 23:13:13 [http-nio-9091-exec-9] DEBUG org.hibernate.SQL - 
+    select
+        count(d1_0.deviceid) 
+    from
+        devices d1_0 
+    where
+        d1_0.monitor_status='MONITORINTERRUPT'
+2026-01-20 23:13:13 [http-nio-9091-exec-1] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:13 [http-nio-9091-exec-5] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:13 [http-nio-9091-exec-3] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:13 [http-nio-9091-exec-10] DEBUG org.hibernate.SQL - 
+    select
+        d1_0.deviceid,
+        d1_0.alert_status,
+        d1_0.calibration_operator,
+        d1_0.calibration_status,
+        d1_0.created_at,
+        d1_0.device_code,
+        d1_0.device_name,
+        d1_0.device_type,
+        d1_0.last_calibration,
+        d1_0.location,
+        d1_0.monitor_status,
+        d1_0.next_calibration,
+        d1_0.operational_status,
+        d1_0.self_calibration,
+        d1_0.updated_at 
+    from
+        devices d1_0
+2026-01-20 23:13:13 [http-nio-9091-exec-9] DEBUG c.b.dynamic.datasource.DynamicRoutingDataSource - dynamic-datasource switch to the primary datasource
+2026-01-20 23:13:13 [http-nio-9091-exec-1] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorOnCountNow，结果：3
+2026-01-20 23:13:13 [http-nio-9091-exec-5] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getCountAll，结果：5
+2026-01-20 23:13:13 [http-nio-9091-exec-3] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorOffCountNow，结果：1
+2026-01-20 23:13:13 [http-nio-9091-exec-9] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getMonitorInterruptCountNow，结果：1
+2026-01-20 23:13:13 [http-nio-9091-exec-10] INFO  com.example.demo.aop.ServiceLogAspect - 【服务调用成功】DeviceService.getAllDevices，结果：[com.example.demo.entity.Device@64e5f0ff, com.example.demo.entity.Device@666465d3, com.example.demo.entity.Device@1433b3cd, com.example.demo.entity.Device@4018851b, com.example.demo.entity.Device@b31f7ef]

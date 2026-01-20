@@ -276,6 +276,7 @@ onMounted(() => {
 .section-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 0.8rem;
@@ -347,6 +348,7 @@ onMounted(() => {
   background: transparent;
   color: #cbd5f5;
   cursor: pointer;
+  font-size: 0.9rem;
 }
 
 .refresh-btn:disabled {
