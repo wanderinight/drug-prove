@@ -121,14 +121,14 @@ defineExpose({ refresh: handleRefresh });
 .link {
   border: none;
   background: none;
-  color: #38bdf8;
+  color: #000000;
   cursor: pointer;
   padding: 0;
   transition: color 0.2s;
 }
 
 .link:hover:not(:disabled) {
-  color: #0ea5e9;
+  color: #333333;
 }
 
 .link:disabled {

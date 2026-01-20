@@ -74,7 +74,7 @@
           </label>
 
           <div class="actions">
-            <button class="primary" :disabled="loading" @click="previewReport">
+            <button class="secondary" :disabled="loading" @click="previewReport">
               {{ loading && actionType === 'preview' ? '预览中...' : '预览 PDF' }}
             </button>
             <button class="secondary" :disabled="loading" @click="generateReport">

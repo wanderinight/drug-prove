@@ -11,7 +11,9 @@
           <h3>设备实时状态</h3>
           <p class="sub-hint">按设备展示监控状态、最新报警信息</p>
         </div>
-        <button class="refresh-btn" @click="fetchDeviceCards">刷新</button>
+        <button class="refresh-btn" @click="fetchDeviceCards" :disabled="loading">
+          {{ loading ? '刷新中...' : '刷新' }}
+        </button>
       </header>
 
       <div class="card-grid">
@@ -83,7 +85,9 @@
               <span class="select-arrow">▾</span>
             </div>
           </label>
-          <button class="refresh-btn" @click="fetchHistoryAlerts">查询</button>
+          <button class="refresh-btn" @click="fetchHistoryAlerts" :disabled="historyLoading">
+            {{ historyLoading ? '查询中...' : '查询' }}
+          </button>
         </div>
       </header>
 
@@ -135,6 +139,7 @@ const deviceCards = ref([]);
 const deviceOptions = ref([]);
 const historyAlerts = ref([]);
 const historyLoading = ref(false);
+const loading = ref(false);
 const historyFilters = ref({
   start: defaultStart(),
   end: defaultEnd(),
@@ -192,6 +197,7 @@ const formatAlertLevel = (level) => {
 };
 
 const fetchDeviceCards = async () => {
+  loading.value = true;
   try {
     const { data } = await axios.get(`${apiBase}/api/alert/device-overview`);
     deviceCards.value = data?.data ?? [];
@@ -203,6 +209,8 @@ const fetchDeviceCards = async () => {
     console.error('获取设备概览失败:', error);
     deviceCards.value = [];
     deviceOptions.value = [];
+  } finally {
+    loading.value = false;
   }
 };
 
@@ -297,7 +305,7 @@ onMounted(() => {
   border-radius: 6px;
   border: 1px solid rgba(148, 163, 184, 0.4);
   background: transparent;
-  color: #e2e8f0;
+  color: #000000;
 }
 
 .select-wrapper {
@@ -311,8 +319,8 @@ onMounted(() => {
   padding: 0.4rem 1.8rem 0.4rem 0.5rem;
   border-radius: 6px;
   border: 1px solid rgba(148, 163, 184, 0.4);
-  background: rgba(15, 23, 42, 0.6);
-  color: #e2e8f0;
+  background: #ffffff;
+  color: #000000;
   font-size: 0.9rem;
 }
 
@@ -339,6 +347,11 @@ onMounted(() => {
   background: transparent;
   color: #cbd5f5;
   cursor: pointer;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .card-grid {
@@ -449,6 +462,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
+  color: #000000;
 }
 
 th,
