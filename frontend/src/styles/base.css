@@ -1,0 +1,45 @@
+:root {
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --primary-color: #3A96A8;
+  --accent-color: #7DB8C4;
+  --app-background-color: #ffffff;
+  /* 中性色（灰） */
+  --text-gray: #666666;
+  /* 侧边栏专用背景 */
+  --sidebar-bg: #3A96A8;
+  /* 侧边栏文字颜色 */
+  --sidebar-text: #ffffff;
+  line-height: 1.4;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text-gray);
+  background-color: var(--app-background-color);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 使用主题色的渐变背景，仅保留 #3A96A8 和 #7DB8C4 */
+  background: radial-gradient(circle at top, #7DB8C4, #3A96A8);
+  padding: 2rem;
+}
+
+.page-heading {
+  font-size: 1.25rem;
+  /* 标题文字使用中性灰色 */
+  color: var(--text-gray);
+}
+

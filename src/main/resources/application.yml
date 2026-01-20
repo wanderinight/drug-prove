@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: demo
+  profiles:
+    active: dev
+
+server:
+  port: 9091
+
+# JWT配置
+jwt:
+  access-token-expiration: 3600000
+  refresh-token-expiration: 604800000
+
+# Actuator配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /actuator
+
+# PDF报告存储路径
+report:
+  storage:
+    path: ./resouce/report
+
+# iTextPDF字体设置
+itext:
+  font:
+    arial: /path/to/arialuni.ttf
+    simfang: /path/to/simfang.ttf
+
+# 日志配置
+logging:
+  file:
+    name: ./resouce/log/application.log
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n"

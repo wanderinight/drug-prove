@@ -1,0 +1,36 @@
+# 生产环境配置
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/drugtest?useSSL=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 10
+      idle-timeout: 60000
+      connection-timeout: 3000
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        jdbc:
+          time_zone: UTC
+
+  jackson:
+    time-zone: UTC
+
+# 生产环境JWT配置（通过环境变量覆盖）
+jwt:
+  access-token-expiration: ${JWT_ACCESS_TOKEN_EXPIRATION:1800000}
+  refresh-token-expiration: ${JWT_REFRESH_TOKEN_EXPIRATION:604800000}
+
+# 生产环境日志级别
+logging:
+  level:
+    root: WARN
+    com.example.demo: INFO
